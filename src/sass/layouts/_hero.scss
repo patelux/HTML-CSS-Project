@@ -1,0 +1,42 @@
+.hero {
+  background-image: url(../images/hero/dots-decor-mob.png);
+}
+
+.hero__title {
+  margin-top: 50px;
+  margin-bottom: 32px;
+
+  max-width: 247px;
+
+  //   font-family: $secondaryFontFam;
+  font-size: 26px;
+  line-height: 1.27;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  @include tablet {
+    margin-top: 14px;
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    margin-top: 43px;
+    margin-bottom: 28px;
+
+    max-width: 367px;
+    font-size: 38px;
+    line-height: 1.26;
+  }
+}
+
+.hero__button {
+  width: 108px;
+  height: 38px;
+border: 2px solid #F8D24E;
+border-radius: 8px;
+
+background-color: transparent;
+  color: $blackColor;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+}

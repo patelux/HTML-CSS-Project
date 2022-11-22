@@ -1,4 +1,6 @@
 .hero {
+	background-repeat: no-repeat;
+	background-size: contain;
   background-image: url(../images/hero/dots-decor-mob.png);
 }
 
@@ -8,7 +10,7 @@
 
   max-width: 247px;
 
-  //   font-family: $secondaryFontFam;
+  font-family: 'Seymour One', sans-serif;
   font-size: 26px;
   line-height: 1.27;
   letter-spacing: 0.04em;
@@ -28,15 +30,122 @@
 }
 
 .hero__button {
+  padding: 0;
   width: 108px;
   height: 38px;
-border: 2px solid #F8D24E;
-border-radius: 8px;
+  border: 2px solid #f8d24e;
+  border-radius: 8px;
 
-background-color: transparent;
-  color: $blackColor;
+  background-color: transparent;
+  color: #000000;
   font-weight: 600;
   font-size: 12px;
   line-height: 1.25;
   text-align: center;
+
+  transition: border-color $durationTiming, color $durationTiming;
+  &:hover {
+    border-color: #0a8817;
+  }
+
+  @include desktop {
+    width: 143px;
+    height: 42px;
+
+    &:focus {
+      outline: transparent;
+      border-color: #0a8817;
+      color: #fcfcfc;
+    }
+    &:active {
+      outline: transparent;
+      border-color: #ababab;
+      color: #000000;
+    }
+  }
+}
+
+.hero__button + .hero__button {
+  margin-left: 12px;
+}
+
+.no-border {
+  width: 108px;
+  height: 38px;
+  border: none;
+  text-decoration: underline;
+  color: #f8d24e;
+  &:hover {
+    color: #0a8817;
+  }
+
+  @include desktop {
+    width: 143px;
+    height: 42px;
+
+    &:focus {
+      outline: transparent;
+      color: #fcfcfc;
+    }
+    &:active {
+      outline: transparent;
+      color: #ababab;
+    }
+  }
+}
+
+.hero__description {
+  display: none;
+  @include tablet {
+    margin-top: 46px;
+    max-width: 151px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  @include desktop {
+    margin-top: 111px;
+    max-width: 200px;
+    font-size: 14px;
+  }
+}
+
+.numbers {
+	display: none;
+	@include tablet {
+		position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: right;
+	}
+  
+  @include desktop {
+	gap: 18px;
+  }
+}
+
+.numbers__item--number {
+	color: #131313;
+  font-weight: 900;
+  font-size: 28px;
+line-height: 1.21;
+@include desktop {
+
+	  font-size: 46px;
+  line-height: 1.22;
+  letter-spacing: 0.04em;
+}
+
+}
+
+.numbers__item--text {
+	font-size: 8px;
+line-height: 1.25;
+@include desktop {
+		margin-top: 4px;
+	font-size: 14px;
+line-height: 1.21px;
+}
 }

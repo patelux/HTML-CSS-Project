@@ -37,16 +37,12 @@
   border-radius: 8px;
 
   background-color: transparent;
-<<<<<<< Updated upstream
   color: #000000;
-=======
-  color: $blackColor;
->>>>>>> Stashed changes
+
   font-weight: 600;
   font-size: 12px;
   line-height: 1.25;
   text-align: center;
-<<<<<<< Updated upstream
 
   transition: border-color $durationTiming, color $durationTiming;
   &:hover {
@@ -153,10 +149,4 @@ line-height: 1.25;
 	font-size: 14px;
 line-height: 1.21px;
 }
-=======
-  @include desktop {
-    font-size: 14px;
-    line-height: 1.29;
-  }
->>>>>>> Stashed changes
 }

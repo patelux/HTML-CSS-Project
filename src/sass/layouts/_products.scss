@@ -4,13 +4,11 @@
         @content;
     }
 }
-
 @mixin tablet {
     @media screen and (min-width: 768px) {
         @content;
     }
 }
-
 @mixin desktop {
     @media screen and (min-width: 1200px) {
         @content;
@@ -23,6 +21,20 @@
 // ********** products
 .section__product {
     margin: 0 auto;
+}
+
+.section__product {
+    background-image: url(../images/product_bg-mob-1x.jpg);
+    background-repeat: auto;
+    background-position: center top;
+    background-size: cover;
+
+    @include tablet {
+        background-image: url(../images/product_bg-tab-1x.jpg);
+    }
+    @include desktop() {
+        background-image: url(../images/product_bg-desk-1x.jpg);
+    }
 }
 
 .product {

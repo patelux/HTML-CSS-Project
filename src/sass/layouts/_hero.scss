@@ -1,7 +1,9 @@
 .hero {
-	background-repeat: no-repeat;
-	background-size: contain;
-  background-image: url(../images/hero/dots-decor-mob.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/hero/dots-decor-mob.png),
+    url(../images/hero/ice-cream-smiles-desk.png),
+    url(../images/hero/ice-creams-plate-desk.png);
 }
 
 .hero__title {
@@ -29,8 +31,16 @@
   }
 }
 
-.hero__button {
-  padding: 0;
+.hero__anchors {
+  display: flex;
+  gap: 12px;
+}
+
+.hero__anchors--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 108px;
   height: 38px;
   border: 2px solid #f8d24e;
@@ -42,7 +52,6 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 1.25;
-  text-align: center;
 
   transition: border-color $durationTiming, color $durationTiming;
   &:hover {
@@ -112,41 +121,39 @@
 }
 
 .numbers {
-	display: none;
-	@include tablet {
-		position: absolute;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: right;
-	}
-  
+  display: none;
+  @include tablet {
+    position: absolute;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+  }
+
   @include desktop {
-	gap: 18px;
+    gap: 18px;
   }
 }
 
 .numbers__item--number {
-	color: #131313;
+  color: #131313;
   font-weight: 900;
   font-size: 28px;
-line-height: 1.21;
-@include desktop {
-
-	  font-size: 46px;
-  line-height: 1.22;
-  letter-spacing: 0.04em;
-}
-
+  line-height: 1.21;
+  @include desktop {
+    font-size: 46px;
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+  }
 }
 
 .numbers__item--text {
-	font-size: 8px;
-line-height: 1.25;
-@include desktop {
-		margin-top: 4px;
-	font-size: 14px;
-line-height: 1.21px;
-}
+  font-size: 8px;
+  line-height: 1.25;
+  @include desktop {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.21px;
+  }
 }

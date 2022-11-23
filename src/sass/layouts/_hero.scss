@@ -1,0 +1,184 @@
+.hero {
+  position: relative;
+  background-color: #84a278;
+  height: 403px;
+  background-repeat: no-repeat;
+
+  background-position: bottom, bottom;
+  background-image: url(../images/hero/ice-cream-smiles-mob.png),
+    url(../images/hero/dots-decor-mob.png);
+  @include tablet {
+    height: 335px;
+    background-position: left bottom 12px, bottom right, bottom;
+    background-image: url(../images/hero/ice-creams-plate-tab.png),
+      url(../images/hero/ice-cream-smiles-tab.png),
+      url(../images/hero/dots-decor-tab.png);
+  }
+  @include desktop {
+    height: 560px;
+    background-position: left bottom 65px, bottom right, bottom;
+    background-image: url(../images/hero/ice-creams-plate-desk.png),
+      url(../images/hero/ice-cream-smiles-desk.png),
+      url(../images/hero/dots-decor-desk.png);
+  }
+}
+
+.hero__title {
+  margin-top: 50px;
+  margin-bottom: 32px;
+
+  max-width: 247px;
+
+  font-family: 'Seymour One', sans-serif;
+  font-size: 26px;
+  line-height: 1.27;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  @include tablet {
+    margin-top: 14px;
+    margin-bottom: 24px;
+  }
+  @include desktop {
+    margin-top: 43px;
+    margin-bottom: 28px;
+
+    max-width: 367px;
+    font-size: 38px;
+    line-height: 1.26;
+  }
+}
+
+.hero__anchors {
+  display: flex;
+  gap: 12px;
+}
+
+.hero__anchors--link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 108px;
+  height: 38px;
+  border: 2px solid #f8d24e;
+  border-radius: 8px;
+
+  background-color: transparent;
+  color: #000000;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+
+  transition: border-color $durationTiming, color $durationTiming;
+  &:hover {
+    border-color: #0a8817;
+  }
+
+  @include desktop {
+    width: 143px;
+    height: 42px;
+
+    &:focus {
+      outline: transparent;
+      border-color: #0a8817;
+      color: #fcfcfc;
+    }
+  }
+}
+
+.no-border {
+  width: 108px;
+  height: 38px;
+  border: none;
+  text-decoration: underline;
+  color: #f8d24e;
+  &:hover {
+    color: #0a8817;
+  }
+
+  @include desktop {
+    width: 143px;
+    height: 42px;
+
+    &:focus {
+      outline: transparent;
+      color: #fcfcfc;
+    }
+  }
+}
+
+.hero__description {
+  display: none;
+  @include tablet {
+    display: block;
+    margin-top: 46px;
+    margin-left: 216px;
+    max-width: 151px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #fcfcfc;
+    &::after {
+      display: block;
+      content: '';
+      margin-top: 20px;
+      @include desktop {
+        margin-top: 24px;
+      }
+
+      height: 16px;
+
+      background-position: left;
+      background-repeat: no-repeat;
+      background-image: url(../images/hero/arrow.svg);
+    }
+  }
+
+  @include desktop {
+    margin-top: 111px;
+    margin-left: 257px;
+    max-width: 200px;
+    font-size: 14px;
+  }
+}
+
+.numbers {
+  display: none;
+  @include tablet {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 0;
+    text-align: right;
+  }
+
+  @include desktop {
+    gap: 18px;
+    margin-bottom: 22px;
+  }
+}
+
+.numbers__item--number {
+  color: #131313;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 1.21;
+  @include desktop {
+    font-size: 46px;
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+  }
+}
+
+.numbers__item--text {
+  font-size: 8px;
+  line-height: 1.25;
+  @include desktop {
+    margin-top: 4px;
+    font-size: 14px;
+    line-height: 1.21px;
+  }
+}

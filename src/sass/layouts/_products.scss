@@ -15,30 +15,47 @@
     }
 }
 
+@mixin retina {
+    @media (min-device-pixel-ratio: 2),(min-resolution: 192dpi),(min-resolution: 2dppx) {
+        @content;
+    }
+}
+
 // ********** var
 :root {}
 
-// ********** products
+// product
 .section__product {
     margin: 0 auto;
 }
 
-// product
 .section__product {
     background-image: url(../images/product_bg-mob-1x.jpg);
     background-repeat: auto;
     background-position: center top;
     background-size: cover;
 
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/product_bg-mob-2x.jpg);
+        }
+
     @include tablet {
         background-image: url(../images/product_bg-tab-1x.jpg);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+                background-image: url(../images/product_bg-tab-2x.jpg);
+        }
     }
+
     @include desktop {
         background-image: url(../images/product_bg-desk-1x.jpg);
+        @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+            background-image: url(../images/product_bg-desk-2x.jpg);
+        }
     }
-}
-
-.product {
 }
 
 .product__container {
@@ -187,7 +204,7 @@
 
 // item::after
 .card-list__item::after {
-    // content: "";
+    content: "";
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -195,18 +212,53 @@
     position: absolute;
     left: calc(50% - 100px);
     top: -108px;
+
+    background-size: cover;
 }
 
 .card-list__item1::after {
-    content: url(../images/prod_1-mob-1x.png);
+    background-image: url(../images/prod_1-mob-1x.png);
+    
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/prod_1-mob-2x.png);
+    }
+
+    @include desktop {
+        background-image: url(../images/prod_1-desk-1x.png);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url(../images/prod_1-desk-2x.png);
+        }
+    }
 }
 
 .card-list__item2::after {
-    content: url(../images/prod_2-mob-1x.png);
+    background-image: url(../images/prod_2-mob-1x.png);
+    
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/prod_2-mob-2x.png);
+    }
+
+    @include desktop {
+        background-image: url(../images/prod_2-desk-1x.png);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url(../images/prod_2-desk-2x.png);
+        }
+    }
 }
 
 .card-list__item3::after {
-    content: url(../images/prod_3-mob-1x.png);
+    background-image: url(../images/prod_3-mob-1x.png);
+    
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: url(../images/prod_3-mob-2x.png);
+    }
+
+    @include desktop {
+        background-image: url(../images/prod_3-desk-1x.png);
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+            background-image: url(../images/prod_3-desk-2x.png);
+        }
+    }
 }
 
 // subtitle

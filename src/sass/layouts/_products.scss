@@ -23,6 +23,7 @@
     margin: 0 auto;
 }
 
+// product
 .section__product {
     background-image: url(../images/product_bg-mob-1x.jpg);
     background-repeat: auto;
@@ -32,16 +33,21 @@
     @include tablet {
         background-image: url(../images/product_bg-tab-1x.jpg);
     }
-    @include desktop() {
+    @include desktop {
         background-image: url(../images/product_bg-desk-1x.jpg);
     }
 }
 
 .product {
-    width: 100%;
+}
+
+.product__container {
+    // width: 100%;
     max-width: 480px;
     padding: 60px 16px;
+    margin: 0 auto;
 
+    
     @include tablet {
         max-width: 768px;
     }
@@ -50,6 +56,7 @@
     }
 }
 
+// subtitle
 .product__subtitle {
     font-family: 'Montserrat';
     font-weight: 800;
@@ -72,6 +79,7 @@
     }
 }
 
+// title
 .product__title {
     font-family: 'Seymour One';
     font-size: 30px;
@@ -97,6 +105,7 @@
 }
 .product__card-list {}
 
+// list
 .card-list {
     display: flex;
     flex-wrap: wrap;
@@ -111,6 +120,7 @@
     }
 }
 
+// item
 .card-list__item {
     width: 100%;
     max-width: 280px;
@@ -126,15 +136,12 @@
 
     &:nth-child(3n + 1) {
         background: #AEC6A5;
-        box-shadow: rgba(10, 136, 23, 0.25);
     }
     &:nth-child(3n + 2) {
         background: #EFD478;
-        box-shadow: rgba(153, 114, 23, 0.25);
     }
     &:nth-child(3n + 3) {
         background: #D6936D;
-        box-shadow: rgba(0, 0, 0, 0.25);
     }
 
     @include tablet {
@@ -147,6 +154,7 @@
     } 
 }
 
+// item::before
 .card-list__item::before {
     content: '';
     width: 200px;
@@ -156,17 +164,30 @@
     position: absolute;
     left: calc(50% - 100px);
     top: -97px;
-    
-    box-shadow: 0px 5px 20px;
-    // box-shadow: 0px 5px 20px;
+}
 
+.card-list__item1::before {
+    box-shadow: 0px 5px 20px rgba(10, 136, 23, 0.25);
     @include desktop {
-        box-shadow: 0px 8px 30px;
+        box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+    }
+}
+.card-list__item2::before {
+    box-shadow: 0px 5px 20px rgba(153, 114, 23, 0.25);
+    @include desktop {
+        box-shadow: 0px 8px 30px rgba(153, 114, 23, 0.25);
+    }
+}
+.card-list__item3::before {
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+    @include desktop {
+        box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.25);
     }
 }
 
+// item::after
 .card-list__item::after {
-    content: url(../images/prod_1-mob-1x.png);
+    // content: "";
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -176,6 +197,19 @@
     top: -108px;
 }
 
+.card-list__item1::after {
+    content: url(../images/prod_1-mob-1x.png);
+}
+
+.card-list__item2::after {
+    content: url(../images/prod_2-mob-1x.png);
+}
+
+.card-list__item3::after {
+    content: url(../images/prod_3-mob-1x.png);
+}
+
+// subtitle
 .card-list__subtitle {
     font-family: 'Montserrat';
     font-weight: 700;
@@ -202,6 +236,7 @@
     }
 }
 
+// text
 .card-list__text {
     font-family: 'Montserrat';
     font-size: 14px;
@@ -219,6 +254,7 @@
 
 }
 
+// button
 .card-list__button{
     width: 40px;
     height: 16px;

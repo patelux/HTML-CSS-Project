@@ -214,18 +214,20 @@
   position: absolute;
   filter: blur(20px);
   transform: translate(30px, -45px);
+  
   width: 260px;
   height: 236px;
   @include tablet {
+	filter: blur(30px);
     width: 400px;
     height: 342px;
-    transform: translate(312px, -405px);
+    transform: translate(324px, -412px);
   }
   @include desktop {
     filter: blur(50px);
     width: 477px;
     height: 590px;
-    transform: translate(633px, -490px);
+    transform: translate(640px, -490px);
   }
 }
 

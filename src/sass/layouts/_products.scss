@@ -1,10 +1,30 @@
+// ********** mixins
+// @mixin mobile {
+//     @media screen and (min-width: 480px) {
+//         @content;
+//     }
+// }
 
+// @mixin tablet {
+//     @media screen and (min-width: 768px) {
+//         @content;
+//     }
+// }
+
+// @mixin desktop {
+//     @media screen and (min-width: 1200px) {
+//         @content;
+//     }
+// }
+
+
+// product
 .section__product {
     margin: 0 auto;
 }
 
 .section__product {
-    // background-image: url(../images/product_bg-mob-1x-min.jpg);
+    background-image: url(../images/product/product_bg-mob-1x-min.jpg);
     background-repeat: auto;
     background-position: center top;
     background-size: cover;
@@ -12,26 +32,26 @@
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        // background-image: url(../images/product_bg-mob-2x-min.jpg);
+        background-image: url(../images/product/product_bg-mob-2x-min.jpg);
     }
 
     @include tablet {
-        // background-image: url(../images/product_bg-tab-1x-min.jpg);
+        background-image: url(../images/product/product_bg-tab-1x-min.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            // background-image: url(../images/product_bg-tab-2x-min.jpg);
+            background-image: url(../images/product/product_bg-tab-2x-min.jpg);
         }
     }
 
     @include desktop {
-        // background-image: url(../images/product_bg-desk-1x-min.jpg);
+        background-image: url(../images/product/product_bg-desk-1x-min.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            // background-image: url(../images/product_bg-desk-2x-min.jpg);
+            background-image: url(../images/product/product_bg-desk-2x-min.jpg);
         }
     }
 }
@@ -46,7 +66,6 @@
     @include tablet {
         max-width: 768px;
     }
-
     @include desktop {
         max-width: 1200px;
     }
@@ -114,7 +133,6 @@
     @include tablet {
         gap: 16px;
     }
-
     @include desktop {
         gap: 29px;
     }
@@ -137,11 +155,9 @@
     &:nth-child(3n + 1) {
         background: #AEC6A5;
     }
-
     &:nth-child(3n + 2) {
         background: #EFD478;
     }
-
     &:nth-child(3n + 3) {
         background: #D6936D;
     }
@@ -150,7 +166,6 @@
         max-width: 224px;
         height: 428px;
     }
-
     @include desktop {
         max-width: 370px;
         height: 536px;
@@ -208,61 +223,61 @@
 }
 
 .card-list__item1::after {
-    // background-image: url(../images/prod_1-mob-1x.png);
+    background-image: url(../images/product/prod_1-mob-1x-min.jpg);
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        // background-image: url(../images/prod_1-mob-2x.png);
+        background-image: url(../images/product/prod_1-mob-2x-min.jpg);
     }
 
     @include desktop {
-        // background-image: url(../images/prod_1-desk-1x-min.jpg);
+        background-image: url(../images/product/prod_1-desk-1x-min.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            // background-image: url(../images/prod_1-desk-1x-min.jpg);
+            background-image: url(../images/product/prod_1-desk-1x-min.jpg);
         }
     }
 }
 
 .card-list__item2::after {
-    // background-image: url(../images/prod_2-mob-1x.png);
+    background-image: url(../images/product/prod_2-mob-1x-min.jpg);
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        // background-image: url(../images/prod_2-mob-2x.png);
+        background-image: url(../images/product/prod_2-mob-2x-min.jpg);
     }
 
     @include desktop {
-        // background-image: url(../images/prod_2-desk-1x.png);
+        background-image: url(../images/product/prod_2-desk-1x-min.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            // background-image: url(../images/prod_2-desk-2x.png);
+            background-image: url(../images/product/prod_2-desk-2x-min.jpg);
         }
     }
 }
 
 .card-list__item3::after {
-    // background-image: url(../images/prod_3-mob-1x.png);
+    background-image: url(../images/product/prod_3-mob-1x-min.jpg);
 
     @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-        // background-image: url(../images/prod_3-mob-2x.png);
+        background-image: url(../images/product/prod_3-mob-2x-min.jpg);
     }
 
     @include desktop {
-        // background-image: url(../images/prod_3-desk-1x.png);
+        background-image: url(../images/product/prod_3-desk-1x-min.jpg);
 
         @media (min-device-pixel-ratio: 2),
         (min-resolution: 192dpi),
         (min-resolution: 2dppx) {
-            // background-image: url(../images/prod_3-desk-2x.png);
+            background-image: url(../images/product/prod_3-desk-2x-min.jpg);
         }
     }
 }

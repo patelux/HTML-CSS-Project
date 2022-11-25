@@ -20,10 +20,8 @@
 
 // product
 .section__product {
-    margin: 0 auto;
-}
+    padding: 60px 16px;
 
-.section__product {
     background-image: url(../images/product/product_bg-mob-1x-min.jpg);
     background-repeat: auto;
     background-position: center top;
@@ -57,9 +55,8 @@
 }
 
 .product__container {
-    // width: 100%;
+    width: 100%;
     max-width: 480px;
-    padding: 60px 16px;
     margin: 0 auto;
 
 
@@ -367,6 +364,7 @@
     position: absolute;
     bottom: 16px;
     left: calc(50% - 20px);
+    transition: transform $durationTiming;
 
     @include tablet {
         bottom: 12px;

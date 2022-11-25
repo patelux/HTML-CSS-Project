@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container header__container">
-    <a class="logo link" href="/"
+    <a class="logo link" href="../src/index.html"
       ><svg class="logo__icon" width="40" height="37">
         <use href="../src/images/icons.svg#icon-logo"></use>
       </svg>
@@ -8,7 +8,7 @@
     <nav class="navigation">
       <ul class="navigation__list list">
         <li class="navigation__item">
-          <a href="" class="navigation__link link">Home</a>
+          <a href="../src/index.html" class="navigation__link link">Home</a>
         </li>
         <li class="navigation__item">
           <a href="#made" class="navigation__link link">How it’s made?</a>
@@ -26,7 +26,7 @@
         <use href="../src/images/icons.svg#icon-menu"></use>
       </svg>
     </button>
-    <button type="button" class="btn header__btn">
+    <button type="button" class="btn header__btn" data-buy-open>
         Buy now<svg class="header__icon" width="12" height="12">
           <use href="../src/images/icons.svg#icon-button-arrow"></use>
         </svg>
@@ -47,7 +47,7 @@
         <div class="menu__content">
           <ul class="mob-menu__list list">
             <li class="mob-menu__item">
-              <a href="/" class="mob-menu__link link" >Home</a>
+              <a href="../src/index.html" class="mob-menu__link link" >Home</a>
             </li>
             <li class="mob-menu__item">
               <a href="#made" class="mob-menu__link link">How it’s made?</a>
@@ -68,5 +68,20 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="modal__backdrop is-hidden" data-buy>
+    <div class="modal">
+      <div class="modal__container">
+        <button class="modal__btn-close" type="button" data-buy-close>
+          <svg class="close-btn-icon" width="24" heigh="24">
+            <use href="./images/icons.svg#icon-close-btn"></use>
+          </svg>
+        </button>
+        <p>Buy now</p>
+
+      </div>
+
+    </div>
+
   </div>
 </header>

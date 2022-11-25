@@ -199,13 +199,23 @@
   @include tablet {
     display: block;
     position: absolute;
-    transform: translateY(-100%);
+    
+	 
     width: 152px;
   }
   @include desktop {
     width: 225px;
-    transform: translateY(-85%);
+    bottom: -250px;
   }
+ animation: plate 8s linear 0ms infinite normal none;
+  @keyframes plate {
+	0% {
+		transform: translateY(-100%) rotate(0deg);
+  }
+  100% {
+	transform: translateY(-100%) rotate(360deg);
+  }
+}
 }
 
 .hero__picture--blur {
@@ -240,7 +250,6 @@
   }
   @include desktop {
     transform: translate(633px, -460px);
-
     width: 456px;
   }
 }

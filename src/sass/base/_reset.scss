@@ -23,8 +23,9 @@ ol {
 
 button {
     padding: 0;
-    cursor: pointer;
+    cursor: url('../images/pointer.svg'), auto;
     font-family: inherit;
+
 }
 
 address {
@@ -33,6 +34,7 @@ address {
 
 a {
     text-decoration: none;
+	 cursor: url('../images/pointer.svg'), auto;
 }
 
 img {

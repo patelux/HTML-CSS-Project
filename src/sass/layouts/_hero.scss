@@ -37,7 +37,6 @@
 }
 
 .hero__title {
-  margin-top: 50px;
   margin-bottom: 32px;
 
   max-width: 247px;
@@ -47,11 +46,10 @@
   line-height: 1.27;
   text-transform: uppercase;
   @include tablet {
-    margin-top: 14px;
     margin-bottom: 24px;
   }
   @include desktop {
-    margin-top: 43px;
+    margin-top: 14px;
     margin-bottom: 28px;
 
     max-width: 367px;
@@ -212,16 +210,16 @@
 
 .hero__picture--blur {
   position: absolute;
-  filter: blur(20px);
-  transform: translate(30px, -45px);
-  
-  width: 260px;
+  filter: blur(25px);
+  transform: translate(55px,5px);
+
+  width: 205px;
   height: 236px;
   @include tablet {
-	filter: blur(30px);
-    width: 400px;
+    filter: blur(35px);
+    width: 300px;
     height: 342px;
-    transform: translate(324px, -412px);
+    transform: translate(374px, -349px);
   }
   @include desktop {
     filter: blur(50px);

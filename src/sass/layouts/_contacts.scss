@@ -1,3 +1,11 @@
+.contacts.section{
+  @include tablet {
+      padding-bottom: 40px;
+    }
+    @include desktop {
+      padding-bottom: 120px;
+    }
+}
 .contacts {
   background-color: $primaryBgColor;
   .container {
@@ -11,11 +19,11 @@
     text-align: start;
     color: $secondaryTextColor;
     @media screen and (min-width: 768px) {
-      padding: 40px 24px 32px 24px;
+      padding: 40px 24px 0px 24px;
       font-size: 14px;
     }
     @media screen and (min-width: 1200px) {
-      padding: 40px 40px 32px 40px;
+      padding: 40px 40px 0px 40px;
       font-size: 16px;
     }
   }

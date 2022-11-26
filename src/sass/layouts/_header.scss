@@ -92,6 +92,7 @@
   display: none;
   position: relative;
   border: 0;
+  transition: color $durationTiming, background-color $durationTiming;
 
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -112,7 +113,7 @@
     font-size: 14px;
     line-height: calc(17 / 14);
 
-    transition: color $durationTiming, background-color $durationTiming;
+   
   }
 
   &:hover {
@@ -120,7 +121,10 @@
   }
 
   &:focus {
+    background-color: #0a8817;
     color: #ffffff;
+    border: transparent;
+    outline: transparent;
   }
 }
 
@@ -230,6 +234,7 @@
 .mob-menu__list {
   text-align: center;
   justify-content: center;
+ 
 }
 
 .mob-menu__item:not(:last-child) {
@@ -251,6 +256,11 @@
   @media screen and (min-width: 768px) {
     font-size: 48px;
     line-height: calc(59 / 48);
+  }
+ 
+  &:focus {
+    outline: 2px solid #f8d24e;
+    border-radius: 8px;
   }
 }
 
@@ -279,6 +289,16 @@
   fill: currentColor;
 }
 
+.modal__backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal {
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms linear;
+}
+
+
 .product-card {
   height: 100%;
   border-radius: 10px;
@@ -297,6 +317,12 @@
 
   text-align: center;
   margin-top: 32px;
+
+  
+  @include tablet {
+    font-size: 20px;
+  line-height: calc(28 / 20);
+  }
 }
 
 .product-card__list {
@@ -504,7 +530,7 @@ textarea {
   width: 100%;
   margin: 0;
   padding: 11px 16px;
-  border-radius: 4px;
+  border-radius: 10px;
   outline: 1px solid #84A178;
   border: transparent;
   background-color: rgba(248, 210, 78, 0.1);
@@ -512,10 +538,43 @@ textarea {
   &::placeholder {
     font-family: $primaryFontFam;
     font-weight: 400;
-    font-size: 14px;
-    line-height: calc(20 / 14);
+    font-size: 12px;
+    line-height: calc(1 / 12);
   
     color: #131313;
-  }
+
+    @include tablet {
+      font-size: 14px;
+    line-height: calc(16 / 14);
+    }
+}
 }
 
+.product-card__btn {
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(17 / 12);
+
+  @include tablet {
+    margin-top: 32px;
+  }
+
+  transition: color $durationTiming, background-color $durationTiming;
+
+  &:hover {
+    background-color: #0a8817;
+    border: transparent;
+    outline: transparent;
+  }
+
+  &:focus {
+    background-color: #0a8817;
+    color: #ffffff;
+    border: transparent;
+    outline: transparent;
+  }
+}

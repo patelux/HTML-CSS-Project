@@ -9,27 +9,33 @@
 .contacts {
   background-color: $primaryBgColor;
   .container {
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     font-weight: 500;
     font-size: 12px;
     line-height: 1.86;
     text-align: start;
     color: $secondaryTextColor;
+    height: 980px;
     @media screen and (min-width: 768px) {
       padding: 40px 24px 0px 24px;
       font-size: 14px;
+      height: 265px;
     }
     @media screen and (min-width: 1200px) {
       padding: 40px 40px 0px 40px;
       font-size: 16px;
+      height: 456px;
     }
   }
 }
 
 .contacts__list {
+  position: absolute;
+  top: -415px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -37,9 +43,11 @@
   align-items: center;
   @media screen and (min-width: 768px) {
     flex-direction: row;
+    top: -360px;
   }
   @media screen and (min-width: 1200px) {
     gap: 32px;
+    top: -190px;
   }
 }
 

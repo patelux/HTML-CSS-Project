@@ -208,6 +208,17 @@
   }
 }
 
+
+.mob-menu.is-hidden .mob-menu__top {
+  transform: translate(-50%);
+}
+
+.mob-menu__top {
+  transform: translate(0%);
+  transition: transform 300ms linear;
+  transition-timing-function: linear;
+}
+
 .mob-menu__logo {
   position: absolute;
   left: 32px;

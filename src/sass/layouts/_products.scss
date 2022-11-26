@@ -381,7 +381,21 @@
 //-----------------------------modal
 
 .product-about {
-    border-radius: 10px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: auto;
+
+  @include tablet {
+    max-height: 995px;
+  }
+}
+
+.form__product-about {
+  padding: 0 20px 20px 20px;
+
+  @include mobile {
+    padding: 0 100px 32px 100px;
+  }
 }
 
 .product-about__title {
@@ -399,19 +413,114 @@
   }
 }
 
-.product-about__img {
-    border-radius: 50%;
-    margin-top: 24px;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: auto;
+.product-about__picture {
+  border-radius: 50%;
+  margin-top: 24px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
+.product-about__img {
+  border-radius: 50%;
+  margin-top: 24px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 7px 0px 0px rgba(156, 190, 143, 0.7);
+}
 
-.form__product-about {
-    padding: 0 20px 20px 20px;
+.composition {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+ justify-content: center;
+ margin-bottom: 40px;
 
-  @include mobile {
-    padding: 0 100px 32px 100px;
+ @include tablet {
+  gap: 20px;
+}
+}
+
+.composition__item {
+  border: 2px solid rgba(156, 190, 143, 1);
+  border-radius: 40px;
+  width: 53px;
+  height: 72px;
+  text-align: center;
+
+  @include tablet {
+    width: 65px;
+    height: 90px;
   }
+}
+
+.composition__text {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: calc(28 / 10);
+  text-align: center;
+  color: #131313;
+
+  @include tablet {
+    font-size: 12px;
+  line-height: calc(28 / 12);
+  }
+}
+
+.composition__text-circle {
+  margin-right: auto;
+  margin-left: auto;
+  padding: 8px 8px;
+  max-width: 43px;
+  max-height: 43px;
+  border-radius: 50%;
+  background-color: rgba(156, 190, 143, 1);
+  box-shadow: 0px 0px 10px 1px  rgba(156, 190, 143, 0.7);
+
+  @include tablet {
+    max-width: 53px;
+  max-height: 53px;
+  }
+}
+
+.product-about__list {
+  margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.product-about__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.product-about__item:not(:last-child) {
+  margin-bottom: 11px;
+}
+
+.product-about__table {
+font-size: 14px;
+line-height: calc(25 / 14);
+letter-spacing: 0.004em;
+
+color: #131313;
+}
+
+.product-about__text {
+font-weight: 500;
+font-size: 20px;
+line-height: calc(28 / 20);
+text-align: center;
+margin-bottom: 24px;
+
+color: #131313;
 }

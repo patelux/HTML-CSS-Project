@@ -168,16 +168,17 @@
   }
   &:focus {
 	background-color: $hoverGreenColor;
-	color: $bgWhite;
+	color: #FFFFFF;
+  fill: #FFFFFF;
   }
 }
 
 .about-btn__icon {
   margin-left: 4px;
-  fill: $blackColor;
+  fill: currentColor;
   transition: fill $durationTiming;
   &:focus {
-	fill: $primaryTextColor;
+	fill: currentColor;
   }
 }
 

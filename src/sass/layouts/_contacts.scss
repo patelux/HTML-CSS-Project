@@ -139,9 +139,38 @@
 
 .contacts__main-button {
   min-width: 196px;
+  border: none;
+  transition: background-color $durationTiming, color $durationTiming;
+    &:hover {
+      background-color: $hoverGreenColor;
+    }
+  
+    &:focus {
+      background-color: $hoverGreenColor;
+      color: #FFFFFF;
+    }
+    &:disabled{
+      background-color: $greyColor;
+    }
 }
 
 .contacts__secondary-button {
   min-width: 196px;
   background-color: transparent;
+    transition: border-color $durationTiming, color $durationTiming;
+      &:hover {
+        border-color: $hoverGreenColor;
+      }
+    
+      &:focus {
+        border-color: $hoverGreenColor;
+        color: #FFFFFF;
+      }
+    
+      &:disabled {
+        border-color: $greyColor;
+      }
+}
+.button-icon {
+  margin-left: 4px;
 }

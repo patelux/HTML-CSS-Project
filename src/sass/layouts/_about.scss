@@ -177,7 +177,7 @@
   fill: $blackColor;
   transition: fill $durationTiming;
   &:focus {
-	fill: $primaryTextColor
+	fill: $primaryTextColor;
   }
 }
 

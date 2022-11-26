@@ -21,6 +21,10 @@
   background-color: #84a178;
   color: #fcfcfc;
 
+  @media screen and (min-width: 480px) {
+    min-height: 138px;
+  }
+
   @media screen and (min-width: 768px) {
     min-height: 138px;
     font-size: 14px;
@@ -50,8 +54,8 @@
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
-  background-color: #d9d9d9;
-  color: #d9d9d9;
+  background-color: #989898;
+  color: #989898;
   margin-top: 12px;
 }
 

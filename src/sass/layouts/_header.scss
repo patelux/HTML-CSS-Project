@@ -302,9 +302,11 @@
 .product-card {
   height: 100%;
   border-radius: 10px;
+  overflow: auto;
 
   @include tablet {
     height: 644px;
+    overflow: hidden;
   }
   
 }
@@ -509,10 +511,10 @@ textarea {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 15px 15px 15px;
+  padding: 0 28px 28px 28px;
 
   @include mobile {
-    padding: 0 40px 40px 40px;
+    padding: 0 100px 32px 100px;
   }
 }
 

@@ -140,4 +140,20 @@
   @media screen and (min-width: 768px) {
     min-height: 32px;
   }
+  &:hover {
+    border-color: $hoverGreenColor;
+    background-color: $hoverGreenColor;
+  }
+
+  &:focus {
+    border-color: $hoverGreenColor;
+    background-color: $hoverGreenColor;
+    color: #FFFFFF;
+    fill:#FFFFFF;
+  }
+
+  &:disabled {
+    border-color: $greyColor;
+    color: $greyColor;
+  }
 }

@@ -313,9 +313,11 @@
 .product-card {
   height: 100%;
   border-radius: 10px;
+  overflow: auto;
 
   @include tablet {
     height: 644px;
+    overflow: hidden;
   }
   
 }
@@ -520,10 +522,10 @@ textarea {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 15px 15px 15px;
+  padding: 0 28px 28px 28px;
 
   @include mobile {
-    padding: 0 40px 40px 40px;
+    padding: 0 100px 32px 100px;
   }
 }
 
@@ -550,7 +552,7 @@ textarea {
     font-family: $primaryFontFam;
     font-weight: 400;
     font-size: 12px;
-    line-height: calc(1 / 12);
+    line-height: calc(12 / 12);
   
     color: #131313;
 
@@ -578,14 +580,14 @@ textarea {
 
   &:hover {
     background-color: #0a8817;
-    border: transparent;
+    border: 2px solid #0a8817;
     outline: transparent;
   }
 
   &:focus {
     background-color: #0a8817;
     color: #ffffff;
-    border: transparent;
+    border: 2px solid #0a8817;
     outline: transparent;
   }
 }

@@ -59,40 +59,39 @@
             </svg>
           </button>
         </div>
-        <div class="modal__backdrop is-hidden" data-readmore>
-          <div class="modal readmore">
-            <div class="modal__box">
+        <div class="backdrop is-hidden" data-readmore>
+          <div class="modal__readmore">
+            <!-- <div class="modal__box"> -->
               <button
-                class="modal__close-btn"
+                class="modal__btn-close"
                 type="button"
                 data-readmore-close
               >
-                <svg class="close-btn-icon" width="24" heigh="24">
+                <svg class="modal__close" width="24" heigh="24">
                   <use href="./images/icons.svg#icon-close-btn"></use>
                 </svg>
               </button>
               <p class="modal__style">How it’s made?</p>
-              <div class="modal__video">
-                <video
-                  src="#"
-                  poster="#"
-                  width="640"
-                  controls
-                  autoplay
-                  loop
-                  preload="auto"
-                ></video>
-                <svg class="icon-play" width="36" height="36">
-                  <use href="./images/icons.svg#icon-clarity_play-solid"></use>
-                </svg>
-              </div>
+
+              <video class="modal__video"
+                src="./images/ice-cream.mp4"
+                poster="#"
+                width="448"
+                controls
+                autoplay
+                loop
+                preload="auto"
+              ></video>
+
+<!-- <iframe class="modal__video" width="448 src="https://www.youtube.com/embed/7gJIyHnD710" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
               <p class="modal__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit
                 amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et
               </p>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>

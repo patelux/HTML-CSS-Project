@@ -1,6 +1,7 @@
 .to-top {
   background: rgba(0, 0, 0, 0.455);
   position: fixed;
+  z-index:999;
   bottom: 16px;
   right:32px;
   width:50px;
@@ -23,7 +24,6 @@
   bottom:32px;
   pointer-events: auto;
   opacity:1;
-  z-index:999;
 }
 
 .icon-up-arrow {
